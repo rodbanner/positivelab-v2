@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = { title: "The Lab | Positive Lab" };
 
@@ -9,7 +10,13 @@ const tools = [
     name: "GEO Site Audit",
     status: "LIVE",
     desc: "Enter any URL and get an instant AI-readiness score. Analyses content quality, structured data, heading hierarchies, reading grade level, and crawlability.",
-    url: "https://audit.positivelab.ai",
+    url: "/answer-economy/geo-audit",
+  },
+  {
+    name: "AI Readiness Assessment",
+    status: "LIVE",
+    desc: "Eight questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
+    url: "/stakeholder-science/assessment",
   },
   {
     name: "Brand DNA Diviner",
@@ -77,9 +84,15 @@ export default function Lab() {
                     {tool.status}
                   </span>
                   {tool.url && (
-                    <a href={tool.url} target="_blank" rel="noopener noreferrer" className="no-underline" style={{ color: "var(--text-tertiary)" }}>
-                      <ExternalLink size={14} />
-                    </a>
+                    tool.url.startsWith("/") ? (
+                      <Link href={tool.url} className="no-underline" style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", color: "var(--color-lab)" }}>
+                        TRY IT →
+                      </Link>
+                    ) : (
+                      <a href={tool.url} target="_blank" rel="noopener noreferrer" className="no-underline" style={{ color: "var(--text-tertiary)" }}>
+                        <ExternalLink size={14} />
+                      </a>
+                    )
                   )}
                 </div>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 8 }}>

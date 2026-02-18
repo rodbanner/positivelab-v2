@@ -4,7 +4,7 @@ export const metadata = { title: "PCG BRAIN | Positive Lab" };
 
 export default function Brain() {
   return (
-    <ArticleLayout pillar="Stakeholder Science" pillarColor="var(--color-stakeholder)" pillarHref="/stakeholder-science" tag="Platform" title="PCG BRAIN" subtitle="The stakeholder intelligence platform – a single, unified view of every stakeholder relationship across your organisation." readTime="5 min read">
+    <ArticleLayout pillar="Stakeholder Science" pillarColor="var(--color-stakeholder)" pillarHref="/stakeholder-science" tag="Platform" title="PCG BRAIN" subtitle="The stakeholder intelligence platform – a single, unified view of every stakeholder relationship across your organisation." readTime="4 min read">
 
       <p>Every organisation has the same problem. Stakeholder intelligence is scattered across inboxes, CRM records, meeting notes, annual reports, social feeds, and the memories of individual relationship managers who may or may not still work for you. Critical signals are missed. Relationships are managed episodically rather than continuously. The left hand does not know what the right hand is doing – and nobody knows what either hand did last quarter.</p>
 
@@ -25,18 +25,6 @@ export default function Brain() {
       <p><strong>Crisis anticipation.</strong> BRAIN identifies converging signals that suggest an emerging issue – a pattern of negative sentiment, unusual media activity, shifting stakeholder behaviour – and alerts the team before the crisis breaks. Prevention is cheaper than cure, and early intervention is cheaper than both.</p>
 
       <p><strong>Competitive intelligence.</strong> BRAIN tracks how competitors engage with shared stakeholders, monitors their public positioning, and identifies shifts in the competitive landscape that might affect your relationships.</p>
-
-      <h2>The architecture</h2>
-
-      <p>BRAIN sits at the centre of PCG&apos;s operating model, drawing data from three distinct but complementary sources.</p>
-
-      <p><strong>Black Sun</strong> contributes financial and environmental reporting data – investor sentiment, regulatory filings, ESG metrics, annual report engagement analytics. This is the quantitative backbone.</p>
-
-      <p><strong>People Made</strong> contributes brand and culture intelligence – employee sentiment, employer brand perception, internal communications effectiveness, cultural health indicators. This is the organisational pulse.</p>
-
-      <p><strong>Stratton Craig</strong> contributes content strategy data – audience engagement, content performance, message resonance, narrative effectiveness. This is the communications layer.</p>
-
-      <p>The value is not in any one of these streams. It is in the synthesis. A stakeholder who appears satisfied in their investor communications but whose employees are showing signs of disengagement presents a very different picture when you see both signals simultaneously. BRAIN makes that synthesis automatic, continuous, and actionable.</p>
 
       <h2>Why it matters</h2>
 

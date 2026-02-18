@@ -22,19 +22,14 @@ export default function GeoAudit() {
           </div>
         </div>
 
-        {/* Tool placeholder */}
-        <div className="max-w-[720px] mx-auto px-6 md:px-10 py-20">
-          <div className="border rounded p-12 text-center" style={{ borderColor: "var(--border)", background: "var(--bg-secondary)" }}>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text-tertiary)", letterSpacing: "0.1em" }}>
-              INTERACTIVE AUDIT TOOL
-            </p>
-            <p className="mt-4" style={{ fontSize: 14, color: "var(--text-secondary)" }}>
-              The GEO Site Audit tool will be embedded here. It analyses content quality, structured data, heading hierarchies, reading grade level, and crawlability to produce an AI-readiness score.
-            </p>
-            <p className="mt-6" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-answer)" }}>
-              COMING SOON
-            </p>
-          </div>
+        {/* Embedded tool */}
+        <div style={{ width: "100%", background: "var(--bg-secondary)" }}>
+          <iframe
+            src="https://geo-audit.replit.app"
+            style={{ width: "100%", height: "calc(100vh - 200px)", minHeight: 600, border: "none", display: "block" }}
+            title="GEO Site Audit Tool"
+            allow="clipboard-write"
+          />
         </div>
       </main>
       <Footer />

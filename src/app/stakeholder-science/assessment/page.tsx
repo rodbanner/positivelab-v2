@@ -9,15 +9,16 @@ export default function Assessment() {
       <Nav />
       <main className="pt-14">
         <div className="border-b" style={{ borderColor: "var(--border)" }}>
+          <div style={{ height: 4, background: "var(--color-lab)" }} />
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-28">
-            <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-stakeholder)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
+            <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-lab)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", fontWeight: 600 }}>
               INTERACTIVE TOOL
             </div>
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.02em", maxWidth: 600 }}>
               AI Readiness Assessment
             </h1>
             <p className="mt-4" style={{ fontSize: 17, color: "var(--text-secondary)", maxWidth: 520, lineHeight: 1.7, fontWeight: 300 }}>
-              Where does your organisation sit on the stakeholder science maturity curve?
+              Eight questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.
             </p>
           </div>
         </div>
@@ -25,9 +26,9 @@ export default function Assessment() {
           <div className="border rounded p-12 text-center" style={{ borderColor: "var(--border)", background: "var(--bg-secondary)" }}>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text-tertiary)", letterSpacing: "0.1em" }}>INTERACTIVE ASSESSMENT</p>
             <p className="mt-4" style={{ fontSize: 14, color: "var(--text-secondary)" }}>
-              An 8-question self-assessment combining the Stakeholder Science booklet&apos;s quick assessment, the SEMM maturity framework, and the AI Adoption Audit methodology. Instant visual results with a consultation CTA.
+              A rapid self-assessment for organisations in the throes of adopting generative AI. Combines maturity frameworks from our work across 150+ enterprise clients with practical benchmarks for leadership, infrastructure, culture, and execution readiness.
             </p>
-            <p className="mt-6" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-stakeholder)" }}>COMING SOON</p>
+            <p className="mt-6" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--color-lab)" }}>COMING SOON</p>
           </div>
         </div>
       </main>

@@ -25,9 +25,8 @@ const pillars = [
     label: "Stakeholder Science",
     color: "var(--color-stakeholder)",
     items: [
-      { title: "The Discipline", tag: "METHODOLOGY", href: "/stakeholder-science", desc: "When intuition meets intelligence in stakeholder engagement" },
-      { title: "AI Readiness Assessment", tag: "TOOL", href: "/stakeholder-science/assessment", desc: "Where does your organisation sit on the maturity curve?" },
-      { title: "PCG BRAIN", tag: "PLATFORM", href: "/stakeholder-science/brain", desc: "The stakeholder intelligence platform" },
+      { title: "The Discipline", tag: "EXTERNAL SITE", href: "https://stakeholderscience.com", desc: "The full methodology, frameworks, and case studies at stakeholderscience.com" },
+      { title: "PCG BRAIN", tag: "PLATFORM", href: "/stakeholder-science/brain", desc: "The stakeholder intelligence platform – a unified view of every relationship" },
     ],
   },
   {
@@ -48,7 +47,8 @@ const pillars = [
     label: "The Lab",
     color: "var(--color-lab)",
     items: [
-      { title: "GEO Site Audit", tag: "LIVE", href: "/lab", desc: "AI search readiness scoring" },
+      { title: "GEO Site Audit", tag: "LIVE", href: "/answer-economy/geo-audit", desc: "AI search readiness scoring" },
+      { title: "AI Readiness Assessment", tag: "LIVE", href: "/stakeholder-science/assessment", desc: "Eight questions to benchmark your AI adoption maturity" },
       { title: "Brand DNA Diviner", tag: "LIVE", href: "/lab", desc: "Extract brand essence from any corpus" },
       { title: "Changemaker Story Writer", tag: "LIVE", href: "/lab", desc: "AI-assisted narrative creation" },
       { title: "Weightless Imagination", tag: "LIVE", href: "/lab", desc: "Structured creative thinking tool" },
@@ -144,22 +144,27 @@ export default function Home() {
 
         {/* Content for active tab */}
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-6 pb-20">
-          {active.items.map((item, i) => (
-            <Link key={i} href={item.href} className="no-underline group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6 border-b transition-all duration-200 hover:pl-3" style={{ borderColor: "var(--border)" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: active.color, fontWeight: 600, minWidth: 80 }}>
-                {item.tag}
-              </span>
-              <div className="flex-1">
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 4, color: "var(--text-primary)" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: 13, color: "var(--text-secondary)", fontWeight: 300 }}>
-                  {item.desc}
-                </p>
-              </div>
-              <ArrowRight size={14} className="hidden md:block opacity-0 group-hover:opacity-40 transition-opacity" style={{ color: "var(--text-primary)" }} />
-            </Link>
-          ))}
+          {active.items.map((item, i) => {
+            const isExternal = item.href.startsWith("http");
+            const Wrapper = isExternal ? "a" : Link;
+            const extraProps = isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {};
+            return (
+              <Wrapper key={i} href={item.href} {...extraProps} className="no-underline group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6 border-b transition-all duration-200 hover:pl-3" style={{ borderColor: "var(--border)" }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: active.color, fontWeight: 600, minWidth: 80 }}>
+                  {item.tag}
+                </span>
+                <div className="flex-1">
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 4, color: "var(--text-primary)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ fontSize: 13, color: "var(--text-secondary)", fontWeight: 300 }}>
+                    {item.desc}
+                  </p>
+                </div>
+                <ArrowRight size={14} className="hidden md:block opacity-0 group-hover:opacity-40 transition-opacity" style={{ color: "var(--text-primary)" }} />
+              </Wrapper>
+            );
+          })}
         </div>
 
         {/* Featured strip */}
