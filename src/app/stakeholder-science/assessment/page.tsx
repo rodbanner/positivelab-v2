@@ -10,7 +10,7 @@ export default function Assessment() {
       <main className="pt-14">
         <div className="border-b" style={{ borderColor: "var(--border)" }}>
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-28">
-            <div className="inline-block mb-6 px-2.5 py-1" style={{ border: "1px solid var(--color-stakeholder)", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-stakeholder)" }}>
+            <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-stakeholder)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
               INTERACTIVE TOOL
             </div>
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.02em", maxWidth: 600 }}>

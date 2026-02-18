@@ -16,7 +16,7 @@ export default function About() {
                 <PveMan size={80} />
               </div>
               <div>
-                <div className="inline-block mb-6 px-2.5 py-1" style={{ border: "1px solid var(--color-about)", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-about)" }}>
+                <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-about)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
                   Advisory
                 </div>
                 <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: 16 }}>

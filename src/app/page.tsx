@@ -78,7 +78,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-8 md:pb-12">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
             <div className="flex-1">
-              <div className="inline-block mb-6 px-2.5 py-1 transition-colors duration-500" style={{ border: `1px solid ${active.color}`, fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: active.color }}>
+              <div className="inline-block mb-6 px-3 py-1.5 transition-colors duration-500" style={{ background: active.color, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
                 INTELLIGENCE · TOOLS · STRATEGY
               </div>
 
@@ -130,9 +130,10 @@ export default function Home() {
                   fontSize: 11,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: activeTab === p.id ? p.color : "var(--text-tertiary)",
-                  borderBottom: activeTab === p.id ? `2px solid ${p.color}` : "2px solid transparent",
-                  background: activeTab === p.id ? "rgba(0,0,0,0.03)" : "transparent",
+                  fontWeight: activeTab === p.id ? 600 : 400,
+                  color: activeTab === p.id ? p.color : "var(--text-secondary)",
+                  borderBottom: activeTab === p.id ? `3px solid ${p.color}` : "3px solid transparent",
+                  background: activeTab === p.id ? "rgba(0,0,0,0.02)" : "transparent",
                 }}
               >
                 {p.label}
@@ -145,7 +146,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-6 pb-20">
           {active.items.map((item, i) => (
             <Link key={i} href={item.href} className="no-underline group flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 py-6 border-b transition-all duration-200 hover:pl-3" style={{ borderColor: "var(--border)" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: active.color, minWidth: 80 }}>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: active.color, fontWeight: 600, minWidth: 80 }}>
                 {item.tag}
               </span>
               <div className="flex-1">
@@ -173,7 +174,7 @@ export default function Home() {
                 Your customers aren&apos;t searching anymore. They&apos;re getting answers.
               </h2>
             </div>
-            <Link href="/answer-economy/white-paper" className="no-underline flex-shrink-0" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-answer)" }}>
+            <Link href="/answer-economy/white-paper" className="no-underline flex-shrink-0 px-4 py-2" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", background: "var(--color-answer)", fontWeight: 600 }}>
               Read →
             </Link>
           </div>

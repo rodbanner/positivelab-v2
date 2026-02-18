@@ -44,8 +44,9 @@ export function Nav() {
                       fontFamily: "var(--font-mono)",
                       fontSize: 11,
                       letterSpacing: "0.08em",
-                      color: isActive ? item.color : "var(--text-tertiary)",
-                      borderBottom: isActive ? `1px solid ${item.color}` : "1px solid transparent",
+                      color: isActive ? item.color : "var(--text-secondary)",
+                      fontWeight: isActive ? 600 : 400,
+                      borderBottom: isActive ? `2px solid ${item.color}` : "2px solid transparent",
                     }}
                   >
                     {item.label}

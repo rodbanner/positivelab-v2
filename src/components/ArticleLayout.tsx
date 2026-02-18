@@ -21,13 +21,14 @@ export function ArticleLayout({ pillar, pillarColor, pillarHref, tag, title, sub
       <main className="pt-14">
         {/* Article header */}
         <div className="border-b" style={{ borderColor: "var(--border)", background: "var(--bg-secondary)" }}>
+          <div style={{ height: 4, background: pillarColor }} />
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 md:py-24">
-            <Link href={pillarHref} className="no-underline inline-flex items-center gap-2 mb-8 transition-opacity hover:opacity-80" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: pillarColor }}>
+            <Link href={pillarHref} className="no-underline inline-flex items-center gap-2 mb-8 transition-opacity hover:opacity-80" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: pillarColor, fontWeight: 600 }}>
               <ArrowLeft size={14} />
               {pillar}
             </Link>
 
-            <div className="inline-block mb-6 px-2.5 py-1" style={{ border: `1px solid ${pillarColor}`, fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: pillarColor }}>
+            <div className="inline-block mb-6 px-3 py-1.5" style={{ background: pillarColor, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
               {tag}
             </div>
 

@@ -46,7 +46,7 @@
   .article-prose p { margin-bottom: 1.5em; }
   .article-prose h2 { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--text-primary); margin: 2.5em 0 0.8em; letter-spacing: -0.02em; }
   .article-prose h3 { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--text-primary); margin: 2em 0 0.6em; }
-  .article-prose blockquote { border-left: 2px solid var(--color-answer); padding-left: 24px; margin: 2em 0; font-style: italic; color: #555555; }
+  .article-prose blockquote { border-left: 3px solid var(--color-answer); padding-left: 24px; margin: 2em 0; font-style: italic; color: #555555; }
   .article-prose ul, .article-prose ol { padding-left: 1.5em; margin-bottom: 1.5em; }
   .article-prose li { margin-bottom: 0.5em; }
   .article-prose a { color: #003246; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }

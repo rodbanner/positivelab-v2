@@ -56,7 +56,7 @@ export default function Lab() {
       <main className="pt-14">
         <div className="border-b" style={{ borderColor: "var(--border)" }}>
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-28">
-            <div className="inline-block mb-6 px-2.5 py-1" style={{ border: "1px solid var(--color-lab)", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-lab)" }}>
+            <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-lab)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", fontWeight: 600 }}>
               The Lab
             </div>
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(36px, 5vw, 56px)", fontWeight: 300, lineHeight: 1.1, letterSpacing: "-0.02em", maxWidth: 700 }}>
@@ -73,7 +73,7 @@ export default function Lab() {
             {tools.map((tool, i) => (
               <div key={i} className="p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: tool.status === "LIVE" ? "var(--color-lab)" : "var(--color-futures)", padding: "2px 8px", border: `1px solid ${tool.status === "LIVE" ? "var(--color-lab)" : "var(--color-futures)"}` }}>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: tool.status === "LIVE" ? "#1a1a1a" : "#FFFFFF", padding: "3px 10px", fontWeight: 600, background: tool.status === "LIVE" ? "var(--color-lab)" : "var(--color-futures)" }}>
                     {tool.status}
                   </span>
                   {tool.url && (
