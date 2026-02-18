@@ -1,6 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { PveMan } from "@/components/PveMan";
+import Image from "next/image";
 
 export const metadata = { title: "About | Positive Lab" };
 
@@ -13,7 +13,7 @@ export default function About() {
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-28">
             <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
               <div className="flex-shrink-0">
-                <PveMan size={80} />
+                <Image src="/rod-banner.jpg" alt="Rod Banner" width={160} height={200} className="object-cover" style={{ borderRadius: 4 }} />
               </div>
               <div>
                 <div className="inline-block mb-6 px-3 py-1.5" style={{ background: "var(--color-about)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontWeight: 600 }}>
