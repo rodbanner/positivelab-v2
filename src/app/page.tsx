@@ -14,7 +14,7 @@ const pillars = [
     label: "Answer Economy",
     color: "var(--color-answer)",
     items: [
-      { title: "The Answer Economy", tag: "WHITE PAPER", href: "/answer-economy/white-paper", desc: "The definitive guide to navigating the shift from search to synthesis" },
+      { title: "The Answer Economy", tag: "WHITE PAPER", href: "/answer-economy/white-paper", desc: "How AI search is rewriting the rules of digital discovery – and what to do about it" },
       { title: "GEO: A Practical Guide", tag: "GUIDE", href: "/answer-economy/geo-guide", desc: "Actionable framework for generative engine optimisation" },
       { title: "GEO Site Audit", tag: "TOOL", href: "/answer-economy/geo-audit", desc: "Test how visible your website is to AI search engines" },
     ],
