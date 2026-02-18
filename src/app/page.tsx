@@ -36,7 +36,7 @@ const pillars = [
     label: "AI Futures",
     color: "var(--color-futures)",
     items: [
-      { title: "The AI Arbitrage Window", tag: "ESSAY", href: "/futures/arbitrage-window", desc: "The closing window of competitive advantage for fast movers" },
+      { title: "The AI Arbitrage Window", tag: "ESSAY", href: "/futures/arbitrage-window", desc: "There's a shrinking window of competitive advantage for businesses that move fast on AI. The parallels with high-frequency trading are striking." },
       { title: "Will the Enterprise Survive?", tag: "ESSAY", href: "/futures/enterprise-survival", desc: "Fluid talent and the obsolescence of the traditional corporation" },
       { title: "The Great Levelling", tag: "ESSAY", href: "/futures/great-levelling", desc: "When every competitor can do everything" },
       { title: "The Colleague That Never Sleeps", tag: "ESSAY", href: "/futures/colleague", desc: "AI as permanent intellectual collaborator" },
