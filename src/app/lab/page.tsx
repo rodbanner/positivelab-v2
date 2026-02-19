@@ -1,6 +1,5 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = { title: "The Lab | Positive Lab" };
@@ -83,32 +82,39 @@ export default function Lab() {
 
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ background: "var(--border)" }}>
-            {tools.map((tool, i) => (
-              <div key={i} className="p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: tool.status === "LIVE" ? "#1a1a1a" : "#FFFFFF", padding: "3px 10px", fontWeight: 600, background: tool.status === "LIVE" ? "var(--color-lab)" : "var(--color-futures)" }}>
-                    {tool.status}
-                  </span>
-                  {tool.url && (
-                    tool.url.startsWith("/") ? (
-                      <Link href={tool.url} className="no-underline" style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", color: "var(--color-lab)" }}>
-                        TRY IT →
-                      </Link>
+            {tools.map((tool, i) => {
+              const inner = (
+                <>
+                  <div className="mb-4">
+                    {tool.url ? (
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", padding: "5px 14px", fontWeight: 600, background: "var(--color-lab)", display: "inline-block" }}>
+                        LIVE — TRY IT →
+                      </span>
                     ) : (
-                      <a href={tool.url} target="_blank" rel="noopener noreferrer" className="no-underline" style={{ color: "var(--text-tertiary)" }}>
-                        <ExternalLink size={14} />
-                      </a>
-                    )
-                  )}
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-tertiary)", padding: "5px 14px", fontWeight: 600, border: "1px solid var(--border)", display: "inline-block" }}>
+                        COMING SOON
+                      </span>
+                    )}
+                  </div>
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 8 }}>
+                    {tool.name}
+                  </h3>
+                  <p style={{ fontSize: 14, color: "var(--text-secondary)", fontWeight: 300, lineHeight: 1.7 }}>
+                    {tool.desc}
+                  </p>
+                </>
+              );
+
+              return tool.url ? (
+                <Link key={i} href={tool.url} className="no-underline block p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
+                  {inner}
+                </Link>
+              ) : (
+                <div key={i} className="p-8" style={{ background: "var(--bg-primary)" }}>
+                  {inner}
                 </div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 8 }}>
-                  {tool.name}
-                </h3>
-                <p style={{ fontSize: 14, color: "var(--text-secondary)", fontWeight: 300, lineHeight: 1.7 }}>
-                  {tool.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </main>
