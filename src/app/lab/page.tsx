@@ -16,7 +16,7 @@ const tools = [
     name: "AI Readiness Assessment",
     status: "LIVE",
     desc: "Eight questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
-    url: "/stakeholder-science/assessment",
+    url: "/tools/ai-assessment",
   },
   {
     name: "Brand DNA Diviner",
@@ -28,7 +28,7 @@ const tools = [
     name: "Changemaker Story Writer",
     status: "LIVE",
     desc: "AI-assisted narrative creation for sustainability and ESG reporting. Feed it the data, get a human story back.",
-    url: null,
+    url: "/tools/story-maker",
   },
   {
     name: "Creative Brief Polisher",
@@ -40,7 +40,13 @@ const tools = [
     name: "Prompt Reviewer",
     status: "LIVE",
     desc: "Paste any AI prompt and get a critique with specific improvements. Analyses clarity, specificity, context, and output format.",
-    url: null,
+    url: "/tools/prompt-share",
+  },
+  {
+    name: "Workflow Logger",
+    status: "LIVE",
+    desc: "Capture and document your team's AI workflows. Log prompts, processes, and outcomes to build an institutional playbook for what works.",
+    url: "/tools/workflow-logger",
   },
   {
     name: "Weightless Imagination",

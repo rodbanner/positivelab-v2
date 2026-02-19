@@ -36,6 +36,10 @@ export default function Brain() {
 
       <p>That is the thesis behind BRAIN. That is why we are building it.</p>
 
+      <blockquote>
+        <p><strong>Want the full picture?</strong> The <a href="/stakeholder-science/brain/deep-dive">deep dive</a> covers all eight modules, the data architecture, the cross-company synthesis model, the phased build sequence, the commercial model, and the risk register.</p>
+      </blockquote>
+
     </ArticleLayout>
   );
 }

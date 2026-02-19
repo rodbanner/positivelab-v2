@@ -48,7 +48,7 @@ const pillars = [
     color: "var(--color-lab)",
     items: [
       { title: "GEO Site Audit", tag: "LIVE", href: "/answer-economy/geo-audit", desc: "AI search readiness scoring" },
-      { title: "AI Readiness Assessment", tag: "LIVE", href: "/stakeholder-science/assessment", desc: "Eight questions to benchmark your AI adoption maturity" },
+      { title: "AI Readiness Assessment", tag: "LIVE", href: "/tools/ai-assessment", desc: "Eight questions to benchmark your AI adoption maturity" },
       { title: "Brand DNA Diviner", tag: "LIVE", href: "/lab", desc: "Extract brand essence from any corpus" },
       { title: "Changemaker Story Writer", tag: "LIVE", href: "/lab", desc: "AI-assisted narrative creation" },
       { title: "Weightless Imagination", tag: "LIVE", href: "/lab", desc: "Structured creative thinking tool" },
