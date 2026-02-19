@@ -27,6 +27,8 @@ const pillars = [
     items: [
       { title: "The Discipline", tag: "EXTERNAL SITE", href: "https://stakeholderscience.com", desc: "The full methodology, frameworks, and case studies at stakeholderscience.com" },
       { title: "PCG BRAIN", tag: "PLATFORM", href: "/stakeholder-science/brain", desc: "The stakeholder intelligence platform – a unified view of every relationship" },
+      { title: "The Opportuni-scape", tag: "FRAMEWORK", href: "/stakeholder-science/opportuni-scape", desc: "Which tasks can AI do now, how well, and where do people remain irreplaceable?" },
+      { title: "The 2026 Plan", tag: "STRATEGIC PLAN", href: "/stakeholder-science/2026-plan", desc: "From exploration to industrialisation in three phases" },
     ],
   },
   {

@@ -51,7 +51,7 @@ const tools = [
     name: "Weightless Imagination",
     status: "LIVE",
     desc: "A structured creative thinking process that systematically removes constraints to unlock lateral solutions. Nine guided steps.",
-    url: null,
+    url: "/tools/weightless-imagination",
   },
   {
     name: "QA Reviewer Agent",

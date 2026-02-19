@@ -66,6 +66,44 @@ export default function StakeholderScience() {
               </span>
             </div>
           </Link>
+
+          <Link href="/stakeholder-science/opportuni-scape" className="no-underline group block border-b py-8 transition-all duration-200 hover:pl-3" style={{ borderColor: "var(--border)" }}>
+            <div className="flex flex-col md:flex-row md:items-baseline gap-3 md:gap-8">
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: "var(--color-stakeholder)", fontWeight: 600, minWidth: 90 }}>
+                FRAMEWORK
+              </span>
+              <div className="flex-1">
+                <h2 className="transition-colors" style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 6, color: "var(--text-primary)" }}>
+                  The PCG Opportuni-scape
+                </h2>
+                <p style={{ fontSize: 14, color: "var(--text-secondary)", fontWeight: 300 }}>
+                  A brutal, honest audit of which tasks AI can already do, how well it does them, and where people remain irreplaceable.
+                </p>
+              </div>
+              <span className="hidden md:block transition-all duration-200 opacity-0 group-hover:opacity-50" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-tertiary)" }}>
+                →
+              </span>
+            </div>
+          </Link>
+
+          <Link href="/stakeholder-science/2026-plan" className="no-underline group block border-b py-8 transition-all duration-200 hover:pl-3" style={{ borderColor: "var(--border)" }}>
+            <div className="flex flex-col md:flex-row md:items-baseline gap-3 md:gap-8">
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", color: "var(--color-stakeholder)", fontWeight: 600, minWidth: 90 }}>
+                STRATEGIC PLAN
+              </span>
+              <div className="flex-1">
+                <h2 className="transition-colors" style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 6, color: "var(--text-primary)" }}>
+                  The 2026 Plan
+                </h2>
+                <p style={{ fontSize: 14, color: "var(--text-secondary)", fontWeight: 300 }}>
+                  From exploration to industrialisation. Embedding AI agents across core enterprise workflows in three phases.
+                </p>
+              </div>
+              <span className="hidden md:block transition-all duration-200 opacity-0 group-hover:opacity-50" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-tertiary)" }}>
+                →
+              </span>
+            </div>
+          </Link>
         </div>
       </main>
       <Footer />

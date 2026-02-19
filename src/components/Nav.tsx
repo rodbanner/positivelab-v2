@@ -11,6 +11,7 @@ const navItems = [
   { href: "/stakeholder-science", label: "Stakeholder Science", color: "var(--color-stakeholder)" },
   { href: "/futures", label: "AI Futures", color: "var(--color-futures)" },
   { href: "/lab", label: "The Lab", color: "var(--color-lab)" },
+  { href: "/manifesto", label: "Manifesto", color: "var(--color-about)" },
   { href: "/about", label: "About", color: "var(--color-about)" },
 ];
 
