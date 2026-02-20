@@ -21,7 +21,7 @@ const tools = [
     name: "Brand DNA Diviner",
     status: "LIVE",
     desc: "Upload any corpus of brand material and extract the essential DNA – tone, values, positioning, personality. Works with annual reports, websites, campaign copy.",
-    url: "https://bdna.positivelab.ai",
+    url: "/tools/brand-dna",
   },
   {
     name: "Changemaker Story Writer",
