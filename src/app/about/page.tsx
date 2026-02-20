@@ -47,7 +47,7 @@ export default function About() {
 
               <h2>Speaking and events</h2>
 
-              <p>Rod speaks on AI transformation, the Answer Economy, stakeholder science, and the future of enterprise. He hosts the annual Snowball ski conference – an exclusive gathering of business leaders and investors.</p>
+              <p>Rod speaks on AI transformation, the Answer Economy, Stakeholder Science, and the future of enterprise. He hosts the annual Snowball ski conference – an exclusive gathering of business leaders and investors.</p>
 
               <h2>Recognition</h2>
 
