@@ -14,7 +14,7 @@ const tools = [
   {
     name: "AI Readiness Assessment",
     status: "LIVE",
-    desc: "Between 9 and 16 questions depending on your answers. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
+    desc: "9 to 16 questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
     url: "/tools/ai-assessment",
   },
   {
