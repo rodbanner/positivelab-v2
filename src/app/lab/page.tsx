@@ -14,7 +14,7 @@ const tools = [
   {
     name: "AI Readiness Assessment",
     status: "LIVE",
-    desc: "Eight questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
+    desc: "Between 9 and 16 questions depending on your answers. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
     url: "/tools/ai-assessment",
   },
   {
@@ -46,6 +46,12 @@ const tools = [
     status: "LIVE",
     desc: "Capture and document your team's AI workflows. Log prompts, processes, and outcomes to build an institutional playbook for what works.",
     url: "/tools/workflow-logger",
+  },
+  {
+    name: "Scopa",
+    status: "LIVE",
+    desc: "Feed it a raw business idea and get an honest verdict. Scopa expands, stress-tests, and scores your concept so you can decide whether to pursue it or move on.",
+    url: "https://scopa.biz",
   },
   {
     name: "Weightless Imagination",
@@ -105,10 +111,18 @@ export default function Lab() {
                 </>
               );
 
+              const isExternal = tool.url?.startsWith("http");
+
               return tool.url ? (
-                <Link key={i} href={tool.url} className="no-underline block p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
-                  {inner}
-                </Link>
+                isExternal ? (
+                  <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" className="no-underline block p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
+                    {inner}
+                  </a>
+                ) : (
+                  <Link key={i} href={tool.url} className="no-underline block p-8 transition-colors duration-200 hover:brightness-110" style={{ background: "var(--bg-primary)" }}>
+                    {inner}
+                  </Link>
+                )
               ) : (
                 <div key={i} className="p-8" style={{ background: "var(--bg-primary)" }}>
                   {inner}
