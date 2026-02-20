@@ -23,7 +23,7 @@ export default function About() {
                   Rod Banner
                 </h1>
                 <p style={{ fontSize: 18, color: "var(--text-secondary)", lineHeight: 1.7, fontWeight: 300, maxWidth: 600 }}>
-                  AI Czar at the Positive Change Group. Chairman and co-founder of AskDitto.io. Building the intelligence layer for stakeholder engagement.
+                  AI Czar at the Positive Change Group. Building the intelligence layer for stakeholder engagement.
                 </p>
               </div>
             </div>
@@ -40,10 +40,6 @@ export default function About() {
               <h2>The Positive Change Group</h2>
 
               <p>PCG is a stakeholder engagement consultancy comprising three operating companies: Black Sun (financial and environmental reporting), People Made (brand and culture consulting), and Stratton Craig (content strategy). Together they serve over 150 global clients.</p>
-
-              <h2>AskDitto.io</h2>
-
-              <p>Ditto is a synthetic market research platform that uses AI personas to simulate audience responses at a fraction of the cost and time of traditional research. Rod is chairman and co-founder.</p>
 
               <h2>Speaking and events</h2>
 
@@ -62,7 +58,7 @@ export default function About() {
               <p style={{ fontSize: 15, color: "var(--text-secondary)", fontWeight: 300, marginBottom: 16 }}>
                 For speaking engagements, advisory work, or to discuss AI transformation.
               </p>
-              <a href="https://www.positivechangegroup.com" target="_blank" rel="noopener noreferrer" className="no-underline inline-block px-6 py-3 transition-opacity hover:opacity-80" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", background: "var(--color-about)" }}>
+              <a href="/contact" className="no-underline inline-block px-6 py-3 transition-opacity hover:opacity-80" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", background: "var(--color-about)" }}>
                 CONTACT →
               </a>
             </div>

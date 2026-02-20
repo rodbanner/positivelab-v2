@@ -13,7 +13,6 @@ const navItems = [
   { href: "/lab", label: "The Lab", color: "var(--color-lab)" },
   { href: "/manifesto", label: "Manifesto", color: "var(--color-about)" },
   { href: "/about", label: "About", color: "var(--color-about)" },
-  { href: "/contact", label: "Contact", color: "var(--color-about)" },
 ];
 
 export function Nav() {
