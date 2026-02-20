@@ -170,14 +170,6 @@ export default function Contact() {
             <div className="lg:border-l lg:pl-16" style={{ borderColor: "var(--border)" }}>
               <div style={{ marginBottom: 32 }}>
                 <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 8, fontWeight: 600 }}>
-                  Direct
-                </p>
-                <a href="mailto:rod@banner.net" style={{ fontSize: 15, color: "var(--text-primary)", fontWeight: 300 }}>
-                  rod@banner.net
-                </a>
-              </div>
-              <div style={{ marginBottom: 32 }}>
-                <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 8, fontWeight: 600 }}>
                   LinkedIn
                 </p>
                 <a href="https://www.linkedin.com/in/rodbanner/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 15, color: "var(--text-primary)", fontWeight: 300 }}>
