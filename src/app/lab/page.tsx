@@ -48,10 +48,10 @@ const tools = [
     url: "/tools/workflow-logger",
   },
   {
-    name: "Scopa",
+    name: "Business Idea Evaluator",
     status: "LIVE",
-    desc: "Feed it a raw business idea and get an honest verdict. Scopa expands, stress-tests, and scores your concept so you can decide whether to pursue it or move on.",
-    url: "https://scopa.biz",
+    desc: "Feed it a raw business idea and get an honest verdict. The Evaluator expands, stress-tests, and scores your concept so you can decide whether to pursue it or move on.",
+    url: "/tools/evaluator",
   },
   {
     name: "Weightless Imagination",
