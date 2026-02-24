@@ -1,76 +1,144 @@
-import { ArticleLayout } from "@/components/ArticleLayout";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const metadata = { title: "Weightless Imagination | Positive Lab" };
 
+const pieces = [
+  {
+    tag: "BOOK",
+    title: "Escape Velocity",
+    subtitle: "A System for Liberating Enterprise Imagination",
+    desc: "The complete methodology. Ten chapters covering the six anchors of conventional thinking, the mechanics of liberation, structured imagination protocols, environment design, and how to build a lasting practice.",
+    href: "/tools/weightless-imagination/book",
+    readTime: "45 min read",
+  },
+  {
+    tag: "GAME SYSTEM",
+    title: "The Complete Game System",
+    subtitle: "Board Game, Card Compendium, Gravity Audit, Facilitation Guide & Digital Platform",
+    desc: "Everything needed to run Escape Velocity sessions. The board game rules, all 240 cards across five decks, the 48-question Gravity Audit, a detailed facilitation guide, and the digital platform specification.",
+    href: "/tools/weightless-imagination/game-system",
+    readTime: "60 min read",
+  },
+];
+
 export default function WeightlessImagination() {
   return (
-    <ArticleLayout pillar="The Lab" pillarColor="var(--color-lab)" pillarHref="/lab" tag="Methodology" title="The Philosophy of Weightless Imagination" subtitle="A systematic approach to unconstrained thinking for enterprise leadership teams." readTime="8 min read">
+    <>
+      <Nav />
+      <main className="pt-14">
+        {/* Header */}
+        <div className="border-b" style={{ borderColor: "var(--border)", background: "var(--bg-secondary)" }}>
+          <div style={{ height: 4, background: "var(--color-lab)" }} />
+          <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 md:py-24">
+            <Link href="/lab" className="no-underline inline-flex items-center gap-2 mb-4 transition-opacity hover:opacity-80" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-lab)", fontWeight: 600 }}>
+              <ArrowLeft size={14} />
+              The Lab
+            </Link>
 
-      <h2>Why this exists</h2>
+            <div className="block mb-6">
+              <span className="inline-block px-3 py-1.5" style={{ background: "var(--color-lab)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", fontWeight: 600 }}>
+                Methodology
+              </span>
+            </div>
 
-      <p>Human imagination possesses an inherent paradox. Whilst theoretically limitless – capable of conceiving unicorns, alternative universes, and impossible geometries – in practice it operates under considerable constraint. Experience, expertise, organisational culture, fear of ridicule, and the accumulated weight of &ldquo;how things are done&rdquo; create a gravitational field that keeps our thinking in predictable orbits.</p>
+            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 400, lineHeight: 1.1, letterSpacing: "-0.02em", maxWidth: 720, marginBottom: 16 }}>
+              Weightless Imagination
+            </h1>
 
-      <p>This is especially true for enterprise leadership teams. The very qualities that propelled them to senior positions – pattern recognition, risk assessment, execution focus – become impediments to genuinely creative thinking. They have seen too much, succeeded too often, and learned too well what works. Their expertise has become their prison.</p>
+            <p style={{ fontSize: 18, color: "var(--text-secondary)", maxWidth: 600, lineHeight: 1.6, fontWeight: 300 }}>
+              A systematic approach to unconstrained thinking for enterprise leadership teams. Temporarily suspend the forces that keep your organisation&apos;s imagination in predictable orbits.
+            </p>
+          </div>
+        </div>
 
-      <p>Escape Velocity is a systematic approach to achieving what we call &ldquo;weightless imagination&rdquo; – thinking that is genuinely unconstrained, at least temporarily, by the practical, the precedented, and the possible. The goal is not to abandon rigour or feasibility permanently, but to separate the imagination phase from the implementation phase, allowing each to operate under its own optimal conditions.</p>
+        {/* Introduction */}
+        <div style={{ background: "var(--bg-reading)" }}>
+          <div className="max-w-[720px] mx-auto px-6 md:px-10 py-12 md:py-16">
+            <p style={{ fontSize: 16, lineHeight: 1.8, color: "var(--text-secondary)", fontWeight: 300 }}>
+              Every large organisation employs intelligent people who are capable of having interesting ideas. Most of those people rarely have interesting ideas at work. This is not a failure of talent. It is a failure of environment.
+            </p>
+            <p className="mt-4" style={{ fontSize: 16, lineHeight: 1.8, color: "var(--text-secondary)", fontWeight: 300 }}>
+              Escape Velocity is a methodology for creating different environments &ndash; temporary spaces where imagination operates under different rules. The system comprises a book describing the philosophy and practice, and a complete game system for running sessions with leadership teams.
+            </p>
+          </div>
+        </div>
 
-      <h2>The six anchors of conventional thinking</h2>
+        {/* Content cards */}
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-8 md:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ background: "var(--border)" }}>
+            {pieces.map((piece, i) => (
+              <Link key={i} href={piece.href} className="no-underline group block p-8 md:p-10 transition-colors duration-200" style={{ background: "var(--bg-primary)" }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", padding: "5px 14px", fontWeight: 600, background: "var(--color-lab)", display: "inline-block", marginBottom: 16 }}>
+                  {piece.tag}
+                </span>
+                <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 400, letterSpacing: "-0.01em", marginBottom: 4, color: "var(--text-primary)" }}>
+                  {piece.title}
+                </h2>
+                <p style={{ fontSize: 14, color: "var(--text-tertiary)", fontWeight: 400, fontStyle: "italic", marginBottom: 12 }}>
+                  {piece.subtitle}
+                </p>
+                <p style={{ fontSize: 14, color: "var(--text-secondary)", fontWeight: 300, lineHeight: 1.7, marginBottom: 16 }}>
+                  {piece.desc}
+                </p>
+                <div className="flex items-center gap-2">
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", color: "var(--text-tertiary)" }}>
+                    {piece.readTime}
+                  </span>
+                  <ArrowRight size={14} className="opacity-0 group-hover:opacity-60 transition-opacity" style={{ color: "var(--text-primary)" }} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
 
-      <p>Before we can achieve weightlessness, we must understand what holds us down. These are the gravitational forces that constrain enterprise imagination.</p>
+        {/* PDF download + status */}
+        <div className="border-t" style={{ borderColor: "var(--border)", background: "var(--bg-secondary)" }}>
+          <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex-1">
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-lab)", fontWeight: 600, marginBottom: 8 }}>In development</p>
+              <p style={{ fontSize: 15, color: "var(--text-secondary)", fontWeight: 300, lineHeight: 1.7, maxWidth: 520 }}>
+                The Weightless Imagination <strong>App</strong> and <strong>Executive Board Game</strong> are both in development. These will bring the methodology to life as interactive tools &ndash; one digital, one physical &ndash; designed for leadership offsites, strategy days, and innovation workshops.
+              </p>
+            </div>
+            <a
+              href="/escape-velocity.pdf"
+              download="Escape-Velocity-Positive-Lab.pdf"
+              className="flex-shrink-0"
+              style={{
+                display: "inline-block",
+                padding: "14px 32px",
+                background: "var(--color-lab)",
+                color: "#1a1a1a",
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                fontWeight: 600,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                transition: "opacity 0.2s",
+              }}
+            >
+              Download the book (PDF) →
+            </a>
+          </div>
+        </div>
 
-      <p><strong>1. The Expertise Trap.</strong> Deep knowledge creates deep ruts. The more you know about how something works, the harder it becomes to imagine it working differently. Experts can immediately see why novel ideas won&apos;t work, which paradoxically prevents them from imagining the ideas that might. In every boardroom, the person who knows the most about a domain is often the least equipped to reimagine it.</p>
-
-      <p><strong>2. The Sunk Cost Bind.</strong> Previous investments – of time, money, reputation, or emotion – create resistance to alternatives. &ldquo;We&apos;ve already spent two years developing this approach&rdquo; becomes an invisible constraint on thinking. The larger the organisation&apos;s commitment to the current path, the harder it becomes to imagine different paths, regardless of their potential superiority.</p>
-
-      <p><strong>3. The Feasibility Filter.</strong> The mind automatically, often unconsciously, filters out ideas deemed impractical. This filtering happens so rapidly that many ideas never reach conscious awareness. We self-censor before we have even properly imagined. In senior leadership, this filter has been refined over decades to be brutally efficient – and brutally limiting.</p>
-
-      <p><strong>4. The Social Constraint.</strong> Fear of appearing foolish, naive, or unrealistic inhibits public imagination. In group settings, this creates a race to the most sensible-sounding idea rather than the most interesting one. The higher the stakes and the more senior the audience, the more powerful this constraint becomes. CEOs are rarely rewarded for wild thinking.</p>
-
-      <p><strong>5. The Success Trap.</strong> Past successes create templates. &ldquo;This worked before&rdquo; becomes a mental shortcut that prevents exploration of alternatives. Organisations and individuals alike become prisoners of their own greatest hits. The more successful an organisation has been, the more it believes its methods are correct – and the less it can imagine fundamentally different approaches.</p>
-
-      <p><strong>6. The Language Limit.</strong> The vocabulary we use to describe problems often presupposes solutions. &ldquo;How do we make this faster?&rdquo; assumes speed is the metric that matters. &ldquo;How do we reduce costs?&rdquo; assumes the current cost structure is fundamentally sound. The question itself constrains the answer. Enterprise strategy is particularly susceptible to this – the frameworks we use to analyse problems shape the solutions we can see.</p>
-
-      <h2>The core principles</h2>
-
-      <p><strong>Deliberate Separation.</strong> The cardinal rule of weightless imagination is the strict separation of ideation from evaluation. These are fundamentally different cognitive modes, and mixing them is fatal to creativity. The mind cannot simultaneously generate possibilities and judge them – the judging function will always dominate, filtering ideas before they fully form.</p>
-
-      <p>This separation must be enforced structurally, not merely requested. Asking people to &ldquo;withhold judgement&rdquo; does not work – the judging function is too deeply embedded. Instead, we create contexts where evaluation is literally impossible – different rooms, different times, different people, different rules.</p>
-
-      <p><strong>Productive Estrangement.</strong> To see familiar problems freshly, we must make them strange. This involves systematically disrupting our habitual frameworks. The techniques include temporal displacement (viewing our challenges from radically different time periods), cross-domain translation (forcing our problems into another discipline&apos;s language), and perspective rotation (inhabiting viewpoints utterly unlike our own).</p>
-
-      <p>Estrangement is not natural. Our minds are optimised to categorise rapidly, to fit new information into existing frameworks. Productive estrangement requires tools that interrupt this process, forcing us to see what we normally filter out.</p>
-
-      <p><strong>Constraint Manipulation.</strong> Constraints shape imagination. By deliberately manipulating them, we can explore different possibility spaces. This is counterintuitive – most people believe that removing constraints leads to more creative thinking. In fact, the relationship is more complex. Sometimes removing a constraint opens new territory. Sometimes adding an extreme constraint forces innovation. The skill is knowing which manipulation to apply.</p>
-
-      <p>Escape Velocity provides systematic methods for constraint removal, constraint inversion, and constraint multiplication – each revealing different facets of the problem space.</p>
-
-      <div style={{ marginTop: 48, padding: "24px 28px", border: "2px solid var(--color-lab)", background: "rgba(184, 233, 134, 0.08)" }}>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-lab)", fontWeight: 600, marginBottom: 8 }}>In development</p>
-        <p style={{ fontSize: 15, lineHeight: 1.7, margin: 0 }}>The Weightless Imagination <strong>App</strong> and <strong>Executive Board Game</strong> are both in development. These will bring the methodology to life as interactive tools – one digital, one physical – designed for leadership offsites, strategy days, and innovation workshops.</p>
-      </div>
-
-      <div style={{ marginTop: 32, textAlign: "center" }}>
-        <a
-          href="/escape-velocity.pdf"
-          download="Escape-Velocity-Positive-Lab.pdf"
-          style={{
-            display: "inline-block",
-            padding: "14px 32px",
-            background: "var(--color-lab)",
-            color: "#1a1a1a",
-            fontFamily: "var(--font-mono)",
-            fontSize: 12,
-            fontWeight: 600,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            textDecoration: "none",
-            transition: "opacity 0.2s",
-          }}
-        >
-          Download the book (PDF) →
-        </a>
-      </div>
-
-    </ArticleLayout>
+        {/* Closing quote */}
+        <div className="border-t" style={{ borderColor: "var(--border)" }}>
+          <div className="max-w-[720px] mx-auto px-6 md:px-10 py-16 text-center">
+            <p style={{ fontSize: 18, fontStyle: "italic", color: "var(--text-secondary)", lineHeight: 1.6, fontWeight: 300 }}>
+              &ldquo;The difficulty lies not so much in developing new ideas as in escaping from old ones.&rdquo;
+            </p>
+            <p className="mt-3" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-tertiary)", letterSpacing: "0.08em" }}>
+              John Maynard Keynes
+            </p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
