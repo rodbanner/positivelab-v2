@@ -31,9 +31,9 @@ const tools = [
   },
   {
     name: "Creative Brief Polisher",
-    status: "LIVE",
+    status: "BETA",
     desc: "Drop in a rough creative brief and get a structured, agency-ready version back. Enforces the fundamentals that briefs routinely miss.",
-    url: null,
+    url: "/tools/creative-brief",
   },
   {
     name: "Prompt Reviewer",
@@ -93,8 +93,8 @@ export default function Lab() {
                 <>
                   <div className="mb-4">
                     {tool.url ? (
-                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", padding: "5px 14px", fontWeight: 600, background: "var(--color-lab)", display: "inline-block" }}>
-                        LIVE — TRY IT →
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1a1a1a", padding: "5px 14px", fontWeight: 600, background: tool.status === "BETA" ? "#FFD866" : "var(--color-lab)", display: "inline-block" }}>
+                        {tool.status === "BETA" ? "IN BETA — TRY IT →" : "LIVE — TRY IT →"}
                       </span>
                     ) : (
                       <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-tertiary)", padding: "5px 14px", fontWeight: 600, border: "1px solid var(--border)", display: "inline-block" }}>

@@ -35,8 +35,8 @@ export default function Home() {
             {/* Stats */}
             <div className="hidden lg:flex flex-col border-l pl-10" style={{ borderColor: "var(--border)", minWidth: 180 }}>
               {[
-                { num: "12", label: "Destination pieces" },
-                { num: "6", label: "Working tools" },
+                { num: "15", label: "Destination pieces" },
+                { num: "10", label: "Working tools" },
                 { num: "4", label: "Research papers" },
                 { num: "43", label: "Citations" },
               ].map((s, i) => (
