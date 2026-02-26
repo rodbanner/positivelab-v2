@@ -60,10 +60,10 @@ const tools = [
     url: "/tools/weightless-imagination",
   },
   {
-    name: "QA Reviewer Agent",
-    status: "BETA",
-    desc: "Automated quality assurance for content production. Checks consistency, accuracy, brand voice compliance, and factual claims.",
-    url: null,
+    name: "Synthetic Research",
+    status: "LIVE",
+    desc: "An example study of British public's opinion of capitalism, finance, and specifically the City of London.",
+    url: "https://app.askditto.io/organization/6a3697e6ca6c49e59c54a82884155cb4/studies/350fac50002749b6ae42b845c6d77d25?question_id=817",
   },
 ];
 
