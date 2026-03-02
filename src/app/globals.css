@@ -39,9 +39,22 @@
 
 @layer components {
   .grid-bg {
+    position: relative;
+  }
+  .grid-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-image: url('/pveman-tile.png');
-    background-size: 80px 80px;
+    background-size: 120px 120px;
     background-repeat: repeat;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .grid-bg > * {
+    position: relative;
+    z-index: 1;
   }
   .article-prose { font-family: var(--font-body); font-size: 17px; line-height: 1.85; color: #333333; font-weight: 300; }
   .article-prose p { margin-bottom: 1.5em; }
