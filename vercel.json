@@ -1,9 +1,10 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "audit.positivelab.ai" }],
-      "destination": "/answer-economy/geo-audit"
+      "destination": "https://www.positivelab.ai/answer-economy/geo-audit",
+      "permanent": true
     }
   ]
 }

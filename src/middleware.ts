@@ -3,13 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host") || "";
 
-  // Route audit.positivelab.ai to the GEO audit page
+  // Redirect audit.positivelab.ai to the GEO audit page on the main site
   if (host.startsWith("audit.")) {
-    const url = request.nextUrl.clone();
-    if (url.pathname === "/") {
-      url.pathname = "/answer-economy/geo-audit";
-      return NextResponse.rewrite(url);
-    }
+    return NextResponse.redirect("https://www.positivelab.ai/answer-economy/geo-audit", 301);
   }
 
   return NextResponse.next();
