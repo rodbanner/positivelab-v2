@@ -36,7 +36,7 @@ export default function Home() {
             <div className="hidden lg:flex flex-col border-l pl-10" style={{ borderColor: "var(--border)", minWidth: 180 }}>
               {[
                 { num: "15", label: "Destination pieces" },
-                { num: "10", label: "Working tools" },
+                { num: "12", label: "Working tools" },
                 { num: "4", label: "Research papers" },
                 { num: "43", label: "Citations" },
               ].map((s, i) => (

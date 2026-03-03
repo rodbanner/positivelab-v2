@@ -12,6 +12,12 @@ const tools = [
     url: "/answer-economy/geo-audit",
   },
   {
+    name: "AI Daily",
+    status: "LIVE",
+    desc: "A daily update on new products and services from the AI world that you should find interesting.",
+    url: "/tools/ai-daily",
+  },
+  {
     name: "AI Readiness Assessment",
     status: "LIVE",
     desc: "9 to 16 questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
@@ -64,6 +70,12 @@ const tools = [
     status: "LIVE",
     desc: "An example study of British public's opinion of capitalism, finance, and specifically the City of London.",
     url: "https://app.askditto.io/organization/6a3697e6ca6c49e59c54a82884155cb4/studies/350fac50002749b6ae42b845c6d77d25?question_id=817",
+  },
+  {
+    name: "AI Daily",
+    status: "LIVE",
+    desc: "A daily update on new products and services from the AI world that you should find interesting.",
+    url: "/tools/ai-daily",
   },
 ];
 
