@@ -12,12 +12,6 @@ const tools = [
     url: "/answer-economy/geo-audit",
   },
   {
-    name: "AI Daily",
-    status: "LIVE",
-    desc: "A daily update on new products and services from the AI world that you should find interesting.",
-    url: "/tools/ai-daily",
-  },
-  {
     name: "AI Readiness Assessment",
     status: "LIVE",
     desc: "9 to 16 questions. Instant results. Find out where your organisation sits on the AI adoption maturity curve.",
